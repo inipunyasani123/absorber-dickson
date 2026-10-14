@@ -5,7 +5,7 @@ export const metadata = {
   title: 'Syarat & Ketentuan',
   description:
     'Ketentuan permintaan sample, perhitungan dosis, pemesanan, dan klaim mutu produk EthyleneAbsorber, Container Dry® II, Desi Pak®, dan Silica Gel.',
-  alternates: { canonical: 'https://absorber-dickson.vercel.app/terms' },
+  alternates: { canonical: 'https://absorber-dickson.pintuweb.id/terms' },
 };
 
 export default function TermsPage() {

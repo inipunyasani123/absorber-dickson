@@ -3,7 +3,7 @@ export const metadata = {
   title: 'Permintaan Sample',
   description:
     'Ajukan permintaan sample EthyleneAbsorber: sebutkan komoditas, volume ruang, dan rute — tim teknis menyiapkan perhitungan dosis tertulis.',
-  alternates: { canonical: 'https://absorber-dickson.vercel.app/kontak' },
+  alternates: { canonical: 'https://absorber-dickson.pintuweb.id/kontak' },
 };
 
 export default function KontakLayout({ children }: { children: React.ReactNode }) {

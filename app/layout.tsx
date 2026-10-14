@@ -24,9 +24,9 @@ const __jsonld = {
   "@graph": [
     {
       "@type": "Organization",
-      "@id": "https://absorber-dickson.vercel.app/#organisasi",
+      "@id": "https://absorber-dickson.pintuweb.id/#organisasi",
       name: "PT Dickson Synergy",
-      url: "https://absorber-dickson.vercel.app",
+      url: "https://absorber-dickson.pintuweb.id",
       description:
         "Penyedia solusi proteksi industri: ethylene absorber, silica gel, dan desiccant bersertifikat untuk rantai pasok komoditas segar.",
       address: {
@@ -61,13 +61,13 @@ const __jsonld = {
       "@type": "CreativeWork",
       name: "EthyleneAbsorber — Konsep Korporat",
       description: "Landing page produk ethylene absorber, konsep desain \"Korporat\".",
-      url: "https://absorber-dickson.vercel.app",
+      url: "https://absorber-dickson.pintuweb.id",
     },
   ],
 }
 
 export const metadata = {
-  metadataBase: new URL("https://absorber-dickson.vercel.app"),
+  metadataBase: new URL("https://absorber-dickson.pintuweb.id"),
   title: {
     default: "EthyleneAbsorber — Konsep Korporat | Dickson Synergy",
     template: "%s — EthyleneAbsorber · Dickson Synergy",
@@ -79,11 +79,11 @@ export const metadata = {
   authors: [{ name: "EthyleneAbsorber" }],
   creator: "EthyleneAbsorber",
   publisher: "EthyleneAbsorber",
-  alternates: { canonical: "https://absorber-dickson.vercel.app" },
+  alternates: { canonical: "https://absorber-dickson.pintuweb.id" },
   openGraph: {
     type: "website",
     locale: "id_ID",
-    url: "https://absorber-dickson.vercel.app",
+    url: "https://absorber-dickson.pintuweb.id",
     siteName: "EthyleneAbsorber",
     title: "EthyleneAbsorber — Konsep Korporat | Dickson Synergy",
     description: "Landing page EthyleneAbsorber konsep \"Korporat\": mengedepankan kredibilitas PT Dickson Synergy sebagai penyedia solusi industri.",

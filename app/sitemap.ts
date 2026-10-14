@@ -2,7 +2,7 @@ import type { MetadataRoute } from "next";
 import { PRODUK } from "@/lib/produk";
 import { CATATAN } from "@/lib/catatan";
 
-const BASE = "https://absorber-dickson.vercel.app";
+const BASE = "https://absorber-dickson.pintuweb.id";
 
 const routes: { path: string; priority: number; changeFrequency: "monthly" | "yearly" }[] = [
   { path: "", priority: 1, changeFrequency: "monthly" },

@@ -5,7 +5,7 @@ export const metadata = {
   title: 'Kebijakan Privasi',
   description:
     'Data apa yang diminta EthyleneAbsorber saat Anda meminta sample atau perhitungan dosis, untuk apa dipakai, dan berapa lama disimpan.',
-  alternates: { canonical: 'https://absorber-dickson.vercel.app/privacy' },
+  alternates: { canonical: 'https://absorber-dickson.pintuweb.id/privacy' },
 };
 
 export default function PrivacyPage() {

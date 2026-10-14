@@ -3,7 +3,7 @@ import { notFound } from 'next/navigation';
 import PageHead from '@/components/PageHead';
 import { CATATAN, catatanBySlug, type Blok } from '@/lib/catatan';
 
-const SITE = 'https://absorber-dickson.vercel.app';
+const SITE = 'https://absorber-dickson.pintuweb.id';
 
 export function generateStaticParams() {
   return CATATAN.map((c) => ({ slug: c.slug }));

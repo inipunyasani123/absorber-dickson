@@ -6,7 +6,7 @@ export const metadata = {
   title: 'Catatan Teknis',
   description:
     'Catatan teknis EthyleneAbsorber: menghitung dosis untuk kontainer 20 ft dan 40 ft, membaca indikator warna, dan memetakan komoditas penghasil serta peka etilen.',
-  alternates: { canonical: 'https://absorber-dickson.vercel.app/catatan-teknis' },
+  alternates: { canonical: 'https://absorber-dickson.pintuweb.id/catatan-teknis' },
 };
 
 export default function CatatanIndex() {

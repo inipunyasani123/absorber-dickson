@@ -8,7 +8,7 @@ export const metadata = {
   title: 'Katalog & Lembar Data',
   description:
     'Lembar data empat produk PT Dickson Synergy: EthyleneAbsorber Sachet, Container Dry® II, Desi Pak®, dan Silica Gel — spesifikasi, cara pakai, dan dokumen yang tersedia.',
-  alternates: { canonical: 'https://absorber-dickson.vercel.app/produk' },
+  alternates: { canonical: 'https://absorber-dickson.pintuweb.id/produk' },
 };
 
 export default function ProdukIndex() {

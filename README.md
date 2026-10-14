@@ -2,7 +2,7 @@
 
 Penyedia solusi proteksi industri: ethylene absorber, silica gel, dan desiccant bersertifikat untuk rantai pasok komoditas segar.
 
-**Demo live:** https://absorber-dickson.vercel.app
+**Demo live:** https://absorber-dickson.pintuweb.id
 
 ![Tangkapan layar EthyleneAbsorber](public/og.jpg)
 

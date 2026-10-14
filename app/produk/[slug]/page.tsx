@@ -5,7 +5,7 @@ import KalkulatorDosis from '@/components/KalkulatorDosis';
 import PageHead from '@/components/PageHead';
 import { PRODUK, produkBySlug } from '@/lib/produk';
 
-const SITE = 'https://absorber-dickson.vercel.app';
+const SITE = 'https://absorber-dickson.pintuweb.id';
 
 export function generateStaticParams() {
   return PRODUK.map((p) => ({ slug: p.slug }));
