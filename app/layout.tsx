@@ -122,6 +122,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <main id="konten">{children}</main>
         <Footer />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(__jsonld) }} />
+        <aside aria-label="Tentang situs demo ini" style={{ display: 'block', margin: 0, padding: '12px 16px', background: '#0f1b33', color: '#dfe6f3', font: '400 13px/1.5 system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif', textAlign: 'center' }}>
+          Konsep desain untuk kontes, buatan PintuWeb — bukan situs resmi merek ini.{' '}
+          <a href="https://www.pintuweb.id/kontak?demo=absorber-dickson" style={{ color: '#ffffff', fontWeight: 600, textDecoration: 'underline', textUnderlineOffset: '3px' }}>Buat yang seperti ini →</a>
+        </aside>
       </body>
     </html>
   )
