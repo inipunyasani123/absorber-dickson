@@ -4,8 +4,7 @@ import { notFound } from 'next/navigation';
 import KalkulatorDosis from '@/components/KalkulatorDosis';
 import PageHead from '@/components/PageHead';
 import { PRODUK, produkBySlug } from '@/lib/produk';
-
-const SITE = 'https://absorber-dickson.pintuweb.id';
+import { meta, SITE } from '@/lib/seo';
 
 export function generateStaticParams() {
   return PRODUK.map((p) => ({ slug: p.slug }));
@@ -15,12 +14,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const { slug } = await params;
   const p = produkBySlug(slug);
   if (!p) return {};
-  return {
-    title: `${p.nama} — Lembar Data ${p.kode}`,
-    description: p.ringkas,
-    alternates: { canonical: `${SITE}/produk/${p.slug}` },
-    openGraph: { images: [{ url: p.image }] },
-  };
+  return meta({ title: `${p.nama} · Lembar Data ${p.kode}`, description: p.ringkas, path: `/produk/${p.slug}` });
 }
 
 export default async function LembarData({ params }: { params: Promise<{ slug: string }> }) {

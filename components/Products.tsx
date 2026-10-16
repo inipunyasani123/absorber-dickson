@@ -61,9 +61,9 @@ const products = [
 
 const Products = () => {
   return (
-    <section id="produk" className="relative bg-white py-24 md:py-32">
+    <section id="produk" className="relative bg-white py-16 md:py-32">
       <div className="mx-auto max-w-7xl px-6 lg:px-10">
-        <div className="mb-14 flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
+        <div className="mb-10 flex flex-col gap-6 md:mb-14 md:flex-row md:items-end md:justify-between">
           <div className="max-w-2xl">
             <p className="mb-5 flex items-center gap-3">
               <span className="tech inline-flex h-[1.375rem] items-center justify-center border border-brand/40 px-1.5 text-[0.6875rem] font-semibold text-brand">
@@ -83,19 +83,21 @@ const Products = () => {
           </div>
         </div>
 
-        {/* Kartu produk — masing-masing membawa ringkasan spesifikasinya sendiri */}
-        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+        {/* Kartu produk — masing-masing membawa ringkasan spesifikasinya sendiri.
+            Di ponsel dijajar mendatar (geser) supaya empat lembar data tidak
+            memanjangkan halaman hingga empat layar. */}
+        <div className="no-scrollbar -mx-6 flex snap-x snap-mandatory scroll-px-6 gap-4 overflow-x-auto px-6 pb-1 sm:mx-0 sm:grid sm:grid-cols-2 sm:gap-6 sm:overflow-visible sm:px-0 sm:pb-0 lg:grid-cols-4">
           {products.map((p) => (
             <article
               key={p.name}
-              className="group relative flex flex-col border border-ink/12 bg-white transition-all duration-300 hover:border-brand/45 hover:shadow-[0_18px_44px_-24px_rgba(0,60,92,0.35)]"
+              className="group relative flex w-[78%] shrink-0 snap-start flex-col border border-ink/12 bg-white transition-all duration-300 hover:border-brand/45 hover:shadow-[0_18px_44px_-24px_rgba(0,60,92,0.35)] sm:w-auto"
             >
               <div className="relative aspect-[4/3] w-full overflow-hidden bg-paper-2">
                 <Image
                   src={p.image}
                   alt={p.name}
                   fill
-                  sizes="(min-width: 1024px) 25vw, (min-width: 640px) 50vw, 100vw"
+                  sizes="(min-width: 1024px) 25vw, (min-width: 640px) 50vw, 78vw"
                   className="object-cover transition-transform duration-700 ease-out group-hover:scale-[1.04]"
                 />
                 <span className="tech absolute top-0 left-0 bg-ink px-2.5 py-1.5 text-[0.6875rem] font-semibold text-white">
@@ -111,7 +113,7 @@ const Products = () => {
 
               <div aria-hidden="true" className="tick-rail h-1.5 text-ink" />
 
-              <div className="flex flex-1 flex-col p-6">
+              <div className="flex flex-1 flex-col p-5 sm:p-6">
                 <h3 className="mb-2.5 text-base font-bold text-ink">
                   <Link href={`/produk/${p.slug}`} className="after:absolute after:inset-0">{p.name}</Link>
                 </h3>
@@ -131,7 +133,7 @@ const Products = () => {
         </div>
 
         {/* Panel sample + catatan keberlanjutan */}
-        <div className="mt-16 grid gap-px overflow-hidden bg-ink/12 lg:grid-cols-[minmax(0,1.4fr)_minmax(0,0.6fr)]">
+        <div className="mt-10 grid gap-px overflow-hidden bg-ink/12 md:mt-16 lg:grid-cols-[minmax(0,1.4fr)_minmax(0,0.6fr)]">
           <div className="flex flex-col justify-center bg-ink p-9 text-white md:p-12">
             <p className="tech-label mb-5 font-semibold text-lime">Uji sebelum membeli</p>
             <h3 className="mb-4 text-2xl leading-tight font-extrabold text-white md:text-[1.75rem]">

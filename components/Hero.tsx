@@ -12,7 +12,7 @@ const keyFigures = [
 
 const Hero = () => {
   return (
-    <section className="relative overflow-hidden bg-paper pt-32 pb-20 md:pt-40 md:pb-24">
+    <section className="relative overflow-hidden bg-paper pt-28 pb-14 md:pt-40 md:pb-24">
       {/* Kertas milimeter */}
       <div aria-hidden="true" className="bp-grid absolute inset-0" />
 
@@ -28,7 +28,7 @@ const Hero = () => {
         style={{ clipPath: 'polygon(18% 0, 100% 0, 100% 100%, 0 100%)' }}
       />
 
-      <div className="relative z-10 mx-auto grid max-w-7xl items-center gap-16 px-6 lg:grid-cols-[minmax(0,1.03fr)_minmax(0,0.97fr)] lg:gap-20 lg:px-10">
+      <div className="relative z-10 mx-auto grid max-w-7xl items-center gap-12 px-6 md:gap-16 lg:grid-cols-[minmax(0,1.03fr)_minmax(0,0.97fr)] lg:gap-20 lg:px-10">
         {/* ---------------------------------------------------------------- */}
         {/* Kolom kiri — pernyataan posisi                                    */}
         {/* ---------------------------------------------------------------- */}
@@ -74,7 +74,7 @@ const Hero = () => {
           {/* Pita angka kunci — dibaca sebagai tabel ringkas, bukan hiasan.
               Di bawah sm dijajar baris demi baris; tiga kolom sempit membuat
               labelnya pecah tiga baris dan tingginya tidak rata. */}
-          <dl className="mt-12 grid max-w-xl border-t-2 border-ink/12 sm:grid-cols-3">
+          <dl className="mt-10 grid max-w-xl border-t-2 border-ink/12 sm:mt-12 sm:grid-cols-3">
             {keyFigures.map((f) => (
               <div
                 key={f.label}
@@ -118,7 +118,7 @@ const Hero = () => {
               <span className="tech-label text-slate-500">Skala 1:1</span>
             </div>
 
-            <div className="relative aspect-[5/6] w-full overflow-hidden bg-paper-2">
+            <div className="relative aspect-[4/3] w-full overflow-hidden bg-paper-2 sm:aspect-[5/6]">
               <Image
                 src="/images/sachet-buah.webp"
                 alt="Sachet EthyleneAbsorber ditempatkan bersama buah segar di dalam kemasan"

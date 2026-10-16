@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { Phone, Mail, MapPin, Clock } from 'lucide-react'
+import { ArrowRight } from 'lucide-react'
 
 const navigasi = [
   { label: 'Beranda', href: '/' },
@@ -29,8 +29,8 @@ export default function Footer() {
       <div aria-hidden="true" className="bp-grid-dark absolute inset-0" />
       <div aria-hidden="true" className="tick-rail absolute inset-x-0 top-0 h-2.5 text-lime" />
 
-      <div className="relative z-10 mx-auto max-w-7xl px-6 pt-20 pb-10 lg:px-10">
-        <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-[minmax(0,1.25fr)_minmax(0,0.75fr)_minmax(0,0.9fr)_minmax(0,1.1fr)]">
+      <div className="relative z-10 mx-auto max-w-7xl px-6 pt-16 pb-10 md:pt-20 lg:px-10">
+        <div className="grid gap-10 md:grid-cols-2 md:gap-12 lg:grid-cols-[minmax(0,1.25fr)_minmax(0,0.75fr)_minmax(0,0.9fr)_minmax(0,1.1fr)]">
           {/* Kop perusahaan */}
           <div>
             <div className="mb-6 flex items-center gap-3">
@@ -54,7 +54,7 @@ export default function Footer() {
                 <span className="block text-[1.0625rem] font-extrabold tracking-tight text-white">
                   Ethylene<span className="font-normal text-lime">Absorber</span>
                 </span>
-                <span className="tech-label mt-1 block text-[0.5625rem] text-white/45">
+                <span className="tech-label mt-1 block text-[0.5625rem] text-white/60">
                   PT Dickson Synergy
                 </span>
               </span>
@@ -65,7 +65,7 @@ export default function Footer() {
               manufaktur, dan ekspor di Indonesia.
             </p>
 
-            <p className="tech-label leading-[1.7] text-white/40">
+            <p className="tech-label leading-[1.7] text-white/60">
               Reg. BPOM RI
               <span className="mt-1 block text-lime">NA18191100273</span>
             </p>
@@ -76,7 +76,7 @@ export default function Footer() {
             <h2 className="tech-label mb-5 border-b border-white/15 pb-3 font-semibold text-white">
               Navigasi
             </h2>
-            <ul className="space-y-3">
+            <ul className="grid grid-cols-2 gap-x-6 gap-y-3 sm:block sm:space-y-3">
               {navigasi.map((l) => (
                 <li key={l.href}>
                   <Link
@@ -95,71 +95,39 @@ export default function Footer() {
             <h2 className="tech-label mb-5 border-b border-white/15 pb-3 font-semibold text-white">
               Standar
             </h2>
-            <dl className="space-y-3.5">
+            <dl className="grid grid-cols-2 gap-x-6 gap-y-3.5 sm:block sm:space-y-3.5">
               {standar.map(([k, v]) => (
                 <div key={k}>
                   <dt className="text-sm text-white/70">{k}</dt>
-                  <dd className="tech mt-0.5 text-[0.75rem] text-white/45">{v}</dd>
+                  <dd className="tech mt-0.5 text-[0.75rem] text-white/60">{v}</dd>
                 </div>
               ))}
             </dl>
           </div>
 
-          {/* Kontak */}
+          {/* Permintaan — satu pintu masuk, tanpa nomor yang belum dipastikan klien */}
           <div>
             <h2 className="tech-label mb-5 border-b border-white/15 pb-3 font-semibold text-white">
-              Hubungi
+              Permintaan
             </h2>
-            <ul className="space-y-5">
-              <li className="flex gap-3.5">
-                <Phone size={16} className="mt-0.5 shrink-0 text-lime" strokeWidth={2} />
-                <div>
-                  <span className="tech-label block text-white/40">Telepon</span>
-                  <a
-                    href="tel:+628123456789"
-                    className="text-sm transition-colors hover:text-lime"
-                  >
-                    +62 812 3456 7890
-                  </a>
-                </div>
-              </li>
-              <li className="flex gap-3.5">
-                <Mail size={16} className="mt-0.5 shrink-0 text-lime" strokeWidth={2} />
-                <div>
-                  <span className="tech-label block text-white/40">Surel</span>
-                  <a
-                    href="mailto:info@ethyleneabsorber.com"
-                    className="text-sm break-all transition-colors hover:text-lime"
-                  >
-                    info@ethyleneabsorber.com
-                  </a>
-                </div>
-              </li>
-              <li className="flex gap-3.5">
-                <MapPin size={16} className="mt-0.5 shrink-0 text-lime" strokeWidth={2} />
-                <div>
-                  <span className="tech-label block text-white/40">Alamat</span>
-                  <span className="text-sm leading-relaxed">
-                    Jl. Teknologi No. 123, Bandung, Indonesia 40234
-                  </span>
-                </div>
-              </li>
-              <li className="flex gap-3.5">
-                <Clock size={16} className="mt-0.5 shrink-0 text-lime" strokeWidth={2} />
-                <div>
-                  <span className="tech-label block text-white/40">Jam Kerja</span>
-                  <span className="text-sm leading-relaxed">
-                    Sen–Jum 08.00–17.00 · Sab 08.00–12.00
-                  </span>
-                </div>
-              </li>
-            </ul>
+            <p className="max-w-xs text-sm leading-relaxed text-white/65">
+              Sample, perhitungan dosis, dan lembar data diminta lewat satu formulir. Sertakan
+              komoditas, volume ruang (m³), dan rute distribusi.
+            </p>
+            <Link
+              href="/kontak"
+              className="mt-6 inline-flex items-center gap-2 border border-lime/50 px-4 py-3 text-sm font-bold text-lime transition-colors hover:bg-lime hover:text-ink"
+            >
+              Isi formulir permintaan
+              <ArrowRight size={15} strokeWidth={2.5} />
+            </Link>
+            <p className="tech-label mt-6 leading-[1.7] text-white/60">Form EA-01 · Dok. EA-KORP-01</p>
           </div>
         </div>
 
         {/* Kaki dokumen — halaman menandatangani dirinya seperti lembar data */}
         <div className="mt-16 flex flex-col gap-4 border-t border-white/12 pt-7 md:flex-row md:items-center md:justify-between">
-          <p className="tech-label text-white/40">
+          <p className="tech-label text-white/60">
             © {tahun} PT Dickson Synergy · Dok. EA-KORP-01 · Rev. {tahun}.01
           </p>
           <div className="flex gap-7">

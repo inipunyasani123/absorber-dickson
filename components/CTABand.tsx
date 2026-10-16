@@ -15,7 +15,7 @@ const CTABand = () => {
       <div aria-hidden="true" className="hatch hatch-white absolute inset-0" />
       <div aria-hidden="true" className="tick-rail absolute inset-x-0 top-0 h-2.5 text-white" />
 
-      <div className="relative z-10 mx-auto max-w-7xl px-6 py-24 md:py-32 lg:px-10">
+      <div className="relative z-10 mx-auto max-w-7xl px-6 py-16 md:py-32 lg:px-10">
         <div className="grid gap-12 lg:grid-cols-[minmax(0,1.15fr)_minmax(0,0.85fr)] lg:items-center lg:gap-16">
           <div>
             <p className="tech-label mb-6 font-semibold text-white/70">Langkah berikutnya</p>

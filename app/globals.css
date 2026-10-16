@@ -176,6 +176,15 @@ h3 {
   );
 }
 
+/* Baris geser di ponsel: bilah gulir disembunyikan, kartu berikutnya yang
+   mengintip di tepi kanan sudah menjadi petunjuk bahwa barisnya bisa digeser. */
+.no-scrollbar {
+  scrollbar-width: none;
+}
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
 /* --------------------------------------------------------------------------
    7. Aksesibilitas — hormati preferensi gerak minim
    -------------------------------------------------------------------------- */

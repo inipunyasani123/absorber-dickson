@@ -3,7 +3,7 @@
 import { motion, AnimatePresence } from 'framer-motion'
 import { useState, useMemo } from 'react'
 import Link from 'next/link'
-import { Search, Plus, Phone, Mail, ArrowRight } from 'lucide-react'
+import { Search, Plus, FileText, ArrowRight } from 'lucide-react'
 
 type Kategori = 'produk' | 'penggunaan' | 'pengiriman' | 'keamanan'
 
@@ -155,7 +155,7 @@ export default function FAQPage() {
         <div className="relative z-10 mx-auto max-w-7xl px-6 pt-36 pb-20 md:pt-44 md:pb-24 lg:px-10">
           <p className="mb-6 flex items-center gap-3">
             <span className="tech inline-flex h-[1.375rem] items-center justify-center border border-lime/45 px-1.5 text-[0.6875rem] font-semibold text-lime">
-              07
+              06
             </span>
             <span aria-hidden="true" className="h-px w-7 bg-lime/45" />
             <span className="tech-label font-semibold text-lime">Lembar Tanya Jawab</span>
@@ -173,15 +173,15 @@ export default function FAQPage() {
 
           <dl className="mt-10 flex flex-wrap gap-x-10 gap-y-4 border-t border-white/15 pt-6">
             <div>
-              <dt className="tech-label text-white/45">Dokumen</dt>
+              <dt className="tech-label text-white/60">Dokumen</dt>
               <dd className="tech mt-1 text-sm text-white">EA-FAQ-01</dd>
             </div>
             <div>
-              <dt className="tech-label text-white/45">Jumlah entri</dt>
+              <dt className="tech-label text-white/60">Jumlah entri</dt>
               <dd className="tech mt-1 text-sm text-white">{FAQ_DATA.length}</dd>
             </div>
             <div>
-              <dt className="tech-label text-white/45">Reg. BPOM RI</dt>
+              <dt className="tech-label text-white/60">Reg. BPOM RI</dt>
               <dd className="tech mt-1 text-sm text-lime">NA18191100273</dd>
             </div>
           </dl>
@@ -359,22 +359,15 @@ export default function FAQPage() {
                 Kirim Pertanyaan Teknis
                 <ArrowRight size={16} strokeWidth={2.5} />
               </Link>
-              <a
-                href="tel:+628123456789"
+              <Link
+                href="/catatan-teknis"
                 className="inline-flex items-center justify-center gap-2 rounded-sm border-2 border-white/60 px-7 py-4 text-sm font-bold text-white transition-colors duration-300 hover:bg-white/12"
               >
-                <Phone size={16} strokeWidth={2.5} />
-                +62 812 3456 7890
-              </a>
-              <a
-                href="mailto:info@ethyleneabsorber.com"
-                className="inline-flex items-center justify-center gap-2 py-2 text-sm font-semibold text-white/80 underline-offset-4 transition-colors hover:text-white hover:underline"
-              >
-                <Mail size={15} strokeWidth={2.5} />
-                info@ethyleneabsorber.com
-              </a>
-              <p className="tech-label mt-2 text-center text-white/60">
-                Jam kerja Sen–Jum 08.00–17.00 · Sab 08.00–12.00
+                <FileText size={16} strokeWidth={2.5} />
+                Baca Catatan Teknis
+              </Link>
+              <p className="tech-label mt-2 text-center text-white/75">
+                Dijawab tertulis, bersama perhitungan dosis
               </p>
             </div>
           </div>

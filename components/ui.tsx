@@ -101,10 +101,10 @@ export function SpecRow({
   note?: string;
 }) {
   return (
-    <div className="grid grid-cols-1 gap-1 border-b border-ink/10 py-4 last:border-b-0 sm:grid-cols-[minmax(0,0.9fr)_minmax(0,0.7fr)_minmax(0,1.4fr)] sm:gap-6 sm:py-3.5">
+    <div className="grid grid-cols-[minmax(0,1fr)_auto] gap-x-4 gap-y-1 border-b border-ink/10 py-3.5 last:border-b-0 sm:grid-cols-[minmax(0,0.9fr)_minmax(0,0.7fr)_minmax(0,1.4fr)] sm:gap-6">
       <dt className="tech-label pt-0.5 font-semibold text-slate-500">{param}</dt>
-      <dd className="tech text-sm font-semibold text-ink">{value}</dd>
-      {note && <dd className="text-sm leading-relaxed text-slate-500">{note}</dd>}
+      <dd className="tech text-right text-sm font-semibold text-ink sm:text-left">{value}</dd>
+      {note && <dd className="col-span-2 text-sm leading-relaxed text-slate-600 sm:col-span-1">{note}</dd>}
     </div>
   );
 }

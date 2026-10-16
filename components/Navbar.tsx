@@ -3,7 +3,7 @@
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { useState, useEffect, useRef } from 'react'
-import { Menu, X, Phone, ArrowRight } from 'lucide-react'
+import { Menu, X, FileText, ArrowRight } from 'lucide-react'
 import { motion, AnimatePresence } from 'framer-motion'
 
 const NAV = [
@@ -22,6 +22,7 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
   const panelRef = useRef<HTMLDivElement>(null)
+  const tombolRef = useRef<HTMLButtonElement>(null)
   const pathname = usePathname()
 
   useEffect(() => {
@@ -31,15 +32,30 @@ export default function Navbar() {
     return () => window.removeEventListener('scroll', onScroll)
   }, [])
 
-  // Kunci scroll & tutup dengan Escape saat laci mobile terbuka
+  // Laci mobile: kunci scroll, fokus pindah ke dalam laci dan berputar di
+  // dalamnya (Tab / Shift+Tab), Escape menutup, lalu fokus kembali ke tombol menu.
   useEffect(() => {
     if (!isOpen) return
-    const onKey = (e: KeyboardEvent) => e.key === 'Escape' && setIsOpen(false)
+    const tombol = tombolRef.current
+    const fokusan = () =>
+      Array.from(panelRef.current?.querySelectorAll<HTMLElement>('a[href], button') ?? [])
+    const t = window.setTimeout(() => fokusan()[0]?.focus(), 30)
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') return setIsOpen(false)
+      if (e.key !== 'Tab') return
+      const el = fokusan()
+      if (!el.length) return
+      const awal = el[0], akhir = el[el.length - 1]
+      if (e.shiftKey && document.activeElement === awal) { e.preventDefault(); akhir.focus() }
+      else if (!e.shiftKey && document.activeElement === akhir) { e.preventDefault(); awal.focus() }
+    }
     document.addEventListener('keydown', onKey)
     document.body.style.overflow = 'hidden'
     return () => {
+      window.clearTimeout(t)
       document.removeEventListener('keydown', onKey)
       document.body.style.overflow = ''
+      tombol?.focus()
     }
   }, [isOpen])
 
@@ -63,13 +79,13 @@ export default function Navbar() {
             <span aria-hidden="true" className="h-3 w-px bg-white/20" />
             <span>EU No 10/2011</span>
           </p>
-          <a
-            href="tel:+628123456789"
+          <Link
+            href="/produk"
             className="tech-label flex items-center gap-2 transition-colors hover:text-lime"
           >
-            <Phone size={12} strokeWidth={2.5} />
-            +62 812 3456 7890
-          </a>
+            <FileText size={12} strokeWidth={2.5} />
+            Lembar data 4 produk
+          </Link>
         </div>
       </div>
 
@@ -119,6 +135,7 @@ export default function Navbar() {
           </nav>
 
           <button
+            ref={tombolRef}
             className="-mr-2 p-2 text-ink lg:hidden"
             onClick={() => setIsOpen(true)}
             aria-label="Buka menu"

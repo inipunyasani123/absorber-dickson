@@ -34,7 +34,7 @@ const legend = [
 
 const Lifespan = () => {
   return (
-    <section id="masa-pakai" className="relative overflow-hidden bg-paper py-24 md:py-32">
+    <section id="masa-pakai" className="relative overflow-hidden bg-paper py-16 md:py-32">
       <div aria-hidden="true" className="bp-grid absolute inset-0" />
 
       <div className="relative z-10 mx-auto max-w-7xl px-6 lg:px-10">
@@ -48,7 +48,7 @@ const Lifespan = () => {
             </>
           }
           lead="Sachet tidak berhenti bekerja diam-diam. Kalium permanganat di dalamnya berubah warna seiring gas yang dioksidasi — dari ungu pekat saat baru menjadi cokelat ketika daya serapnya habis. Tidak perlu alat ukur untuk tahu kapan harus diganti."
-          className="mb-14"
+          className="mb-10 md:mb-14"
         />
 
         {/* ------------------------------------------------------------------ */}

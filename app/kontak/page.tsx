@@ -3,35 +3,15 @@
 import { useState } from 'react'
 import Link from 'next/link'
 import { motion, AnimatePresence } from 'framer-motion'
-import { Mail, Phone, MapPin, Clock, Send, Check, ArrowRight, Loader2 } from 'lucide-react'
+import { Send, Check, ArrowRight, Loader2 } from 'lucide-react'
 
-const kontak = [
-  {
-    icon: Phone,
-    label: 'Telepon',
-    value: '+62 812 3456 7890',
-    href: 'tel:+628123456789',
-    note: 'Jalur tercepat pada jam kerja',
-  },
-  {
-    icon: Mail,
-    label: 'Surel',
-    value: 'info@ethyleneabsorber.com',
-    href: 'mailto:info@ethyleneabsorber.com',
-    note: 'Dibalas dalam 1–2 jam kerja',
-  },
-  {
-    icon: MapPin,
-    label: 'Kantor',
-    value: 'Jl. Teknologi No. 123, Bandung 40234',
-    note: 'Kunjungan dengan janji temu',
-  },
-  {
-    icon: Clock,
-    label: 'Jam Kerja',
-    value: 'Sen–Jum 08.00–17.00',
-    note: 'Sabtu 08.00–12.00 · Minggu tutup',
-  },
+/* Volume acuan untuk mengisi kolom "Volume ruang". Angkanya sama dengan
+   CT-01: satu sachet untuk 1–2 m³, jadi rentangnya volume ÷ 2 sampai volume ÷ 1. */
+const acuan = [
+  { ruang: 'Kontainer 20 ft', volume: '± 33 m³', sachet: '17 – 33' },
+  { ruang: 'Kontainer 40 ft', volume: '± 67 m³', sachet: '34 – 67' },
+  { ruang: 'Kontainer 40 ft HC', volume: '± 76 m³', sachet: '38 – 76' },
+  { ruang: 'Ruang simpan / cold storage', volume: 'P × L × T', sachet: '÷ 2 s.d. ÷ 1' },
 ]
 
 const alurKerja = [
@@ -103,7 +83,7 @@ export default function ContactPage() {
             <div className="lg:pt-4">
               <p className="mb-6 flex items-center gap-3">
                 <span className="tech inline-flex h-[1.375rem] items-center justify-center border border-lime/45 px-1.5 text-[0.6875rem] font-semibold text-lime">
-                  08
+                  07
                 </span>
                 <span aria-hidden="true" className="h-px w-7 bg-lime/45" />
                 <span className="tech-label font-semibold text-lime">Permintaan Sample</span>
@@ -297,38 +277,38 @@ export default function ContactPage() {
       </header>
 
       {/* ------------------------------------------------------------------ */}
-      {/* Register kontak                                                     */}
+      {/* Volume acuan                                                         */}
       {/* ------------------------------------------------------------------ */}
       <section className="relative overflow-hidden bg-paper py-20 md:py-28">
         <div aria-hidden="true" className="bp-grid absolute inset-0" />
 
         <div className="relative z-10 mx-auto max-w-7xl px-6 lg:px-10">
-          <h2 className="tech-label mb-8 border-b-2 border-ink/12 pb-4 font-semibold text-ink">
-            Tabel 02 — Saluran kontak
-          </h2>
+          <div className="mb-8 flex flex-col gap-3 border-b-2 border-ink/12 pb-4 sm:flex-row sm:items-baseline sm:justify-between">
+            <h2 className="tech-label font-semibold text-ink">Tabel 02 — Volume acuan untuk formulir</h2>
+            <p className="tech-label text-slate-500">1 sachet = 1–2 m³ ruang tertutup</p>
+          </div>
 
-          <dl className="grid gap-px bg-ink/12 sm:grid-cols-2 lg:grid-cols-4">
-            {kontak.map((k) => (
-              <div key={k.label} className="bg-white p-7">
-                <dt className="mb-2">
-                  <span aria-hidden="true" className="mb-5 flex h-11 w-11 items-center justify-center bg-brand/12 text-brand">
-                    <k.icon size={19} strokeWidth={2} />
-                  </span>
-                  <span className="tech-label font-semibold text-slate-500">{k.label}</span>
-                </dt>
-                <dd className="text-sm leading-snug font-bold text-ink">
-                  {k.href ? (
-                    <a href={k.href} className="transition-colors hover:text-brand">
-                      {k.value}
-                    </a>
-                  ) : (
-                    k.value
-                  )}
+          <dl className="grid grid-cols-2 gap-px border border-ink/12 bg-ink/12 lg:grid-cols-4">
+            {acuan.map((a) => (
+              <div key={a.ruang} className="bg-white p-4 sm:p-7">
+                <dt className="tech-label leading-[1.5] font-semibold text-slate-500">{a.ruang}</dt>
+                <dd className="tech mt-3 text-xl font-semibold text-ink sm:text-2xl">{a.volume}</dd>
+                <dd className="mt-3 flex flex-col gap-1 border-t border-ink/10 pt-3 sm:flex-row sm:items-baseline sm:justify-between sm:gap-3">
+                  <span className="tech-label text-slate-500">Sachet</span>
+                  <span className="tech text-sm font-semibold text-brand">{a.sachet}</span>
                 </dd>
-                <dd className="mt-2 text-[0.8125rem] leading-relaxed text-slate-500">{k.note}</dd>
               </div>
             ))}
           </dl>
+
+          <p className="mt-5 max-w-3xl text-sm leading-relaxed text-slate-600">
+            Batas atas untuk komoditas penghasil etilen tinggi atau muatan yang rapat; batas bawah
+            untuk komoditas yang lebih tenang. Cara menghitungnya ada di{' '}
+            <Link href="/catatan-teknis/dosis-kontainer-20-dan-40-ft" className="font-semibold text-brand underline-offset-4 hover:underline">
+              CT-01
+            </Link>
+            .
+          </p>
 
           {/* Arahan sebelum menghubungi */}
           <div className="mt-12 flex flex-col gap-6 border-l-2 border-brand bg-white px-8 py-7 sm:flex-row sm:items-center sm:justify-between">

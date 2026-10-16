@@ -2,17 +2,19 @@ import React from 'react';
 import { TrendingDown, Thermometer, Timer } from 'lucide-react';
 import { Eyebrow } from '@/components/ui';
 
+/* Tiga temuan, semuanya dari mekanisme yang dijelaskan di brief — tanpa
+   statistik susut nasional yang tidak bersumber. */
 const losses = [
   {
-    value: '30–40%',
-    label: 'Susut pascapanen',
-    desc: 'Porsi hasil panen hortikultura Indonesia yang tidak pernah sampai ke konsumen karena rusak di rantai distribusi.',
+    value: 'Tertutup',
+    label: 'Etilen menumpuk',
+    desc: 'Di udara terbuka etilen terurai. Di kontainer, gudang, atau kemasan tertutup ia tertahan dan terus bertambah selama perjalanan.',
     icon: <TrendingDown size={20} strokeWidth={2} />,
   },
   {
-    value: '2–3×',
-    label: 'Percepatan pematangan',
-    desc: 'Etilen yang terperangkap dalam kontainer tertutup mempercepat pematangan hingga beberapa kali lipat.',
+    value: 'Berantai',
+    label: 'Satu peti memicu peti lain',
+    desc: 'Peti yang matang lebih dulu melepas lebih banyak etilen, yang ikut mematangkan peti di sekitarnya.',
     icon: <Timer size={20} strokeWidth={2} />,
   },
   {
@@ -34,8 +36,8 @@ const Problem = () => {
         style={{ clipPath: 'polygon(38% 0, 100% 0, 100% 100%, 0 100%)' }}
       />
 
-      <div className="relative z-10 mx-auto max-w-7xl px-6 py-24 md:py-32 lg:px-10">
-        <div className="grid items-start gap-16 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.05fr)] lg:gap-20">
+      <div className="relative z-10 mx-auto max-w-7xl px-6 py-16 md:py-32 lg:px-10">
+        <div className="grid items-start gap-10 md:gap-16 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.05fr)] lg:gap-20">
           {/* Pernyataan masalah */}
           <div>
             <Eyebrow no="01" tone="dark">

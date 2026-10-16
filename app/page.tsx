@@ -5,13 +5,14 @@ import HowItWorks from '@/components/HowItWorks'
 import Lifespan from '@/components/Lifespan'
 import Products from '@/components/Products'
 import Applications from '@/components/Applications'
-import Testimonials from '@/components/Testimonials'
 import FaqPreview from '@/components/FaqPreview'
 import CTABand from '@/components/CTABand'
 
 /* Halaman dibaca berurutan seperti lembar data:
    posisi → kepatuhan → masalah → mekanisme → masa pakai →
-   katalog → penerapan → rekam jejak → tanya jawab → tindakan. */
+   katalog → penerapan → tanya jawab → tindakan.
+   Pita angka perusahaan & kutipan pelanggan dihapus: angka dan nama itu
+   tidak ada di brief, jadi tidak boleh tampil sebagai fakta. */
 export default function HomePage() {
   return (
     <>
@@ -22,7 +23,6 @@ export default function HomePage() {
       <Lifespan />
       <Products />
       <Applications />
-      <Testimonials />
       <FaqPreview />
       <CTABand />
     </>

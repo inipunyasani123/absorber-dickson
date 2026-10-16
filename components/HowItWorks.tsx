@@ -27,20 +27,22 @@ const steps = [
 
 const HowItWorks = () => {
   return (
-    <section id="cara-kerja" className="relative bg-white py-24 md:py-32">
+    <section id="cara-kerja" className="relative bg-white py-16 md:py-32">
       <div className="mx-auto max-w-7xl px-6 lg:px-10">
         <SectionHead
           no="02"
           eyebrow="Cara Kerja"
           title="Empat tahap, satu reaksi kimia yang tidak bisa berbalik"
           lead="Ethylene absorber bukan pengawet dan tidak bersentuhan dengan produk. Ia bekerja pada udara di sekelilingnya — menghapus pemicu pematangan, bukan menutupinya."
-          className="mb-16"
+          className="mb-10 md:mb-16"
         />
 
-        <ol className="grid gap-x-8 gap-y-12 sm:grid-cols-2 lg:grid-cols-4">
+        {/* Di ponsel tiap tahap menjadi baris (nomor di kiri, teks di kanan);
+            rel penghubung baru muncul saat tahap dijajar mendatar. */}
+        <ol className="grid gap-x-8 gap-y-6 sm:grid-cols-2 sm:gap-y-12 lg:grid-cols-4">
           {steps.map((step, i) => (
-            <li key={step.no} className="relative">
-              <div className="mb-6 flex items-center gap-4">
+            <li key={step.no} className="relative grid grid-cols-[2.75rem_minmax(0,1fr)] gap-x-4 sm:block">
+              <div className="row-span-2 sm:mb-6 sm:flex sm:items-center sm:gap-4">
                 <span className="tech flex h-11 w-11 shrink-0 items-center justify-center border-2 border-ink text-sm font-semibold text-ink">
                   {step.no}
                 </span>
@@ -48,21 +50,21 @@ const HowItWorks = () => {
                 {i < steps.length - 1 ? (
                   <span
                     aria-hidden="true"
-                    className="tick-rail h-2 flex-1 text-brand opacity-45"
+                    className="tick-rail hidden h-2 flex-1 text-brand opacity-45 sm:block"
                   />
                 ) : (
-                  <span aria-hidden="true" className="h-px flex-1 bg-brand/25" />
+                  <span aria-hidden="true" className="hidden h-px flex-1 bg-brand/25 sm:block" />
                 )}
               </div>
 
-              <h3 className="mb-2.5 text-lg font-bold text-ink">{step.title}</h3>
+              <h3 className="mb-1.5 pt-0.5 text-lg font-bold text-ink sm:mb-2.5 sm:pt-0">{step.title}</h3>
               <p className="text-sm leading-relaxed text-slate-600">{step.desc}</p>
             </li>
           ))}
         </ol>
 
         {/* Catatan teknis — gaya blok catatan kaki pada lembar data */}
-        <div className="mt-16 flex flex-col gap-5 border-l-2 border-brand bg-paper px-8 py-7 sm:flex-row sm:items-center sm:justify-between">
+        <div className="mt-10 flex flex-col gap-5 border-l-2 border-brand bg-paper px-6 py-6 sm:px-8 sm:py-7 md:mt-16 sm:flex-row sm:items-center sm:justify-between">
           <div className="max-w-2xl">
             <p className="tech-label mb-2.5 font-semibold text-brand">Catatan teknis</p>
             <p className="text-sm leading-relaxed text-slate-700">

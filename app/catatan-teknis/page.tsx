@@ -1,13 +1,14 @@
 import Link from 'next/link';
 import PageHead from '@/components/PageHead';
 import { CATATAN } from '@/lib/catatan';
+import { meta } from '@/lib/seo';
 
-export const metadata = {
+export const metadata = meta({
   title: 'Catatan Teknis',
   description:
-    'Catatan teknis EthyleneAbsorber: menghitung dosis untuk kontainer 20 ft dan 40 ft, membaca indikator warna, dan memetakan komoditas penghasil serta peka etilen.',
-  alternates: { canonical: 'https://absorber-dickson.pintuweb.id/catatan-teknis' },
-};
+    'Catatan teknis EthyleneAbsorber: dosis untuk kontainer 20 dan 40 ft, cara membaca indikator warna, serta komoditas penghasil dan peka etilen.',
+  path: '/catatan-teknis',
+});
 
 export default function CatatanIndex() {
   return (

@@ -29,20 +29,6 @@ const __jsonld = {
       url: "https://absorber-dickson.pintuweb.id",
       description:
         "Penyedia solusi proteksi industri: ethylene absorber, silica gel, dan desiccant bersertifikat untuk rantai pasok komoditas segar.",
-      address: {
-        "@type": "PostalAddress",
-        streetAddress: "Jl. Teknologi No. 123",
-        addressLocality: "Bandung",
-        postalCode: "40234",
-        addressCountry: "ID",
-      },
-      contactPoint: {
-        "@type": "ContactPoint",
-        telephone: "+62-812-3456-7890",
-        contactType: "sales",
-        areaServed: "ID",
-        availableLanguage: ["id", "en"],
-      },
     },
     {
       "@type": "Product",
@@ -60,7 +46,7 @@ const __jsonld = {
     {
       "@type": "CreativeWork",
       name: "EthyleneAbsorber — Konsep Korporat",
-      description: "Landing page produk ethylene absorber, konsep desain \"Korporat\".",
+      description: "Konsep desain situs produk ethylene absorber bergaya lembar data, dibuat untuk kontes brief PT Dickson Synergy.",
       url: "https://absorber-dickson.pintuweb.id",
     },
   ],
@@ -70,10 +56,10 @@ export const metadata = {
   metadataBase: new URL("https://absorber-dickson.pintuweb.id"),
   title: {
     default: "EthyleneAbsorber — Konsep Korporat | Dickson Synergy",
-    template: "%s — EthyleneAbsorber · Dickson Synergy",
+    template: "%s · Dickson Synergy",
   },
   description:
-    "Landing page EthyleneAbsorber konsep \"Korporat\": mengedepankan kredibilitas PT Dickson Synergy sebagai penyedia solusi industri. Tersertifikasi BPOM RI NA18191100273, FDA 21 CFR 175.300, dan EU No 10/2011.",
+    "Konsep situs EthyleneAbsorber bergaya lembar data: penyerap etilen terdaftar BPOM RI, satu sachet untuk 1–2 m³, efektif 30 hari, dengan kalkulator dosis.",
   applicationName: "EthyleneAbsorber",
   keywords: ["ethylene absorber", "dickson synergy", "landing page korporat", "desain web", "silica gel", "desiccant"],
   authors: [{ name: "EthyleneAbsorber" }],
@@ -84,15 +70,15 @@ export const metadata = {
     type: "website",
     locale: "id_ID",
     url: "https://absorber-dickson.pintuweb.id",
-    siteName: "EthyleneAbsorber",
+    siteName: "EthyleneAbsorber · Dickson Synergy",
     title: "EthyleneAbsorber — Konsep Korporat | Dickson Synergy",
-    description: "Landing page EthyleneAbsorber konsep \"Korporat\": mengedepankan kredibilitas PT Dickson Synergy sebagai penyedia solusi industri.",
+    description: "Konsep situs EthyleneAbsorber bergaya lembar data: penyerap etilen terdaftar BPOM RI, satu sachet untuk 1–2 m³, efektif 30 hari, dengan kalkulator dosis.",
     images: [{ url: "/og.jpg", width: 1200, height: 630, alt: "EthyleneAbsorber — Konsep Korporat | Dickson Synergy" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "EthyleneAbsorber — Konsep Korporat | Dickson Synergy",
-    description: "Landing page EthyleneAbsorber konsep \"Korporat\": mengedepankan kredibilitas PT Dickson Synergy sebagai penyedia solusi industri.",
+    description: "Konsep situs EthyleneAbsorber bergaya lembar data: penyerap etilen terdaftar BPOM RI, satu sachet untuk 1–2 m³, efektif 30 hari, dengan kalkulator dosis.",
     images: ["/og.jpg"],
   },
   robots: {

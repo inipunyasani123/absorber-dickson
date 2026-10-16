@@ -23,12 +23,12 @@ const faqs = [
 
 const FaqPreview = () => {
   return (
-    <section id="faq-ringkas" className="relative overflow-hidden bg-paper py-24 md:py-32">
+    <section id="faq-ringkas" className="relative overflow-hidden bg-paper py-16 md:py-32">
       <div aria-hidden="true" className="bp-grid absolute inset-0" />
 
       <div className="relative z-10 mx-auto grid max-w-7xl gap-14 px-6 lg:grid-cols-[minmax(0,0.85fr)_minmax(0,1.15fr)] lg:gap-20 lg:px-10">
         <div className="lg:sticky lg:top-28 lg:self-start">
-          <Eyebrow no="07">Pertanyaan Umum</Eyebrow>
+          <Eyebrow no="06">Pertanyaan Umum</Eyebrow>
           <h2 className="mb-5 text-3xl leading-[1.14] font-extrabold text-ink md:text-4xl lg:text-[2.6rem]">
             Yang paling sering ditanyakan sebelum uji coba
           </h2>

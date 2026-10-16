@@ -2,8 +2,7 @@ import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import PageHead from '@/components/PageHead';
 import { CATATAN, catatanBySlug, type Blok } from '@/lib/catatan';
-
-const SITE = 'https://absorber-dickson.pintuweb.id';
+import { meta, SITE } from '@/lib/seo';
 
 export function generateStaticParams() {
   return CATATAN.map((c) => ({ slug: c.slug }));
@@ -13,12 +12,9 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const { slug } = await params;
   const c = catatanBySlug(slug);
   if (!c) return {};
-  return {
-    title: `${c.kode} · ${c.judul}`,
-    description: c.ringkas,
-    alternates: { canonical: `${SITE}/catatan-teknis/${c.slug}` },
-    openGraph: { type: 'article' },
-  };
+  // Judul berkode dipakai bila muat 60 karakter; bila tidak, cukup judul catatannya.
+  const t = `${c.kode} · ${c.judul}`;
+  return meta({ title: t.length <= 60 ? t : c.judul, description: c.ringkas, path: `/catatan-teknis/${c.slug}`, type: 'article' });
 }
 
 function Isi({ b, n }: { b: Blok; n: number }) {
@@ -37,8 +33,10 @@ function Isi({ b, n }: { b: Blok; n: number }) {
   if ('tabel' in b)
     return (
       <figure className="mt-8">
-        <figcaption className="tech-label mb-2 font-semibold text-ink">Tabel {n}</figcaption>
-        <div className="overflow-x-auto border border-ink/15 bg-white">
+        <figcaption id={`tabel-${n}`} className="tech-label mb-2 font-semibold text-ink">Tabel {n}</figcaption>
+        {/* Tabel lebar digeser ke samping di layar sempit; wilayahnya bisa difokus
+            supaya pengguna papan ketik tetap bisa menggulirnya. */}
+        <div className="overflow-x-auto border border-ink/15 bg-white" tabIndex={0} role="region" aria-labelledby={`tabel-${n}`}>
           <table className="w-full min-w-[34rem] text-left text-sm">
             <thead className="border-b-2 border-ink/15 bg-paper">
               <tr>{b.tabel.kepala.map((h) => <th key={h} scope="col" className="tech-label px-4 py-3 font-semibold text-slate-600">{h}</th>)}</tr>
