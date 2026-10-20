@@ -28,7 +28,7 @@ export const PRODUK: Produk[] = [
     slug: 'ethyleneabsorber-sachet',
     kode: 'EA-01',
     nama: 'EthyleneAbsorber Sachet',
-    image: '/images/sachet-buah.webp',
+    image: '/images/teknis/gbr-sachet.webp',
     fungsi: 'Etilen',
     ringkas: 'Penyerap gas etilen berbasis kalium permanganat untuk komoditas segar di dalam kemasan, peti, dan kontainer.',
     uraian:
@@ -59,7 +59,7 @@ export const PRODUK: Produk[] = [
     slug: 'container-dry-ii',
     kode: 'CD-02',
     nama: 'Container Dry® II',
-    image: '/images/container.webp',
+    image: '/images/teknis/gbr-container.webp',
     fungsi: 'Kelembapan',
     ringkas: 'Desiccant gantung berdaya serap tinggi yang menahan kelembapan di dalam kontainer selama pelayaran jarak jauh.',
     uraian:
@@ -87,7 +87,7 @@ export const PRODUK: Produk[] = [
     slug: 'desi-pak',
     kode: 'DP-03',
     nama: 'Desi Pak®',
-    image: '/images/desi.webp',
+    image: '/images/teknis/gbr-desipak.webp',
     fungsi: 'Kelembapan',
     ringkas: 'Desiccant dalam kemasan kantong berbahan tanah liat, fleksibel untuk kemasan ritel maupun muatan palet.',
     uraian:
@@ -114,7 +114,7 @@ export const PRODUK: Produk[] = [
     slug: 'silica-gel',
     kode: 'SG-04',
     nama: 'Silica Gel',
-    image: '/images/silika.webp',
+    image: '/images/teknis/gbr-silika.webp',
     fungsi: 'Kelembapan',
     ringkas: 'Butiran silica gel mutu industri untuk proteksi kelembapan pada barang jadi, komponen, dan peralatan.',
     uraian:

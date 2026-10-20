@@ -8,8 +8,7 @@ const products = [
     no: '01',
     slug: 'ethyleneabsorber-sachet',
     name: 'EthyleneAbsorber Sachet',
-    // Foto sachet di antara buah; foto lama (orang melakban kardus) tidak memperlihatkan sachetnya.
-    image: '/images/sachet-buah.webp',
+    image: '/images/teknis/gbr-sachet.webp',
     desc: 'Penyerap gas etilen berbasis kalium permanganat untuk komoditas segar di dalam kemasan, peti, dan kontainer.',
     specs: [
       ['Bentuk', 'Sachet'],
@@ -22,7 +21,7 @@ const products = [
     no: '02',
     slug: 'container-dry-ii',
     name: 'Container Dry® II',
-    image: '/images/container.webp',
+    image: '/images/teknis/gbr-container.webp',
     desc: 'Desiccant gantung berdaya serap tinggi yang menahan kelembapan di dalam kontainer selama pelayaran jarak jauh.',
     specs: [
       ['Bentuk', 'Gantung'],
@@ -35,7 +34,7 @@ const products = [
     no: '03',
     slug: 'desi-pak',
     name: 'Desi Pak®',
-    image: '/images/desi.webp',
+    image: '/images/teknis/gbr-desipak.webp',
     desc: 'Desiccant dalam kemasan kantong berbahan tanah liat, fleksibel untuk kemasan ritel maupun muatan palet.',
     specs: [
       ['Bentuk', 'Kantong'],
@@ -48,7 +47,7 @@ const products = [
     no: '04',
     slug: 'silica-gel',
     name: 'Silica Gel',
-    image: '/images/silika.webp',
+    image: '/images/teknis/gbr-silika.webp',
     desc: 'Butiran silica gel mutu industri untuk proteksi kelembapan pada barang jadi, komponen, dan peralatan.',
     specs: [
       ['Bentuk', 'Butiran'],
@@ -95,7 +94,7 @@ const Products = () => {
               <div className="relative aspect-[4/3] w-full overflow-hidden bg-paper-2">
                 <Image
                   src={p.image}
-                  alt={p.name}
+                  alt={`Gambar teknis ${p.name}`}
                   fill
                   sizes="(min-width: 1024px) 25vw, (min-width: 640px) 50vw, 78vw"
                   className="object-cover transition-transform duration-700 ease-out group-hover:scale-[1.04]"

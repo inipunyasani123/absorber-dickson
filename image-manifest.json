@@ -1,9 +1,11 @@
 {
- "/images/buahsegar1.webp": "f4003427",
- "/images/buahsegar2.webp": "953a5832",
- "/images/container.webp": "a5bb674d",
- "/images/desi.webp": "05f2ee73",
- "/images/minuman1.webp": "d1a0dc7f",
- "/images/sachet-buah.webp": "26a03b59",
- "/images/silika.webp": "1aabbfa7"
+ "/images/teknis/gbr-container.webp": "34a50285",
+ "/images/teknis/gbr-desipak.webp": "d2778efe",
+ "/images/teknis/gbr-sachet.webp": "d6c6bae2",
+ "/images/teknis/gbr-silika.webp": "c564eee7",
+ "/images/teknis/hero-kemasan.webp": "1bb69a09",
+ "/images/teknis/sektor-ekspor.webp": "13f4330d",
+ "/images/teknis/sektor-gudang.webp": "d18cba12",
+ "/images/teknis/sektor-olahan.webp": "8a4f5815",
+ "/images/teknis/sektor-ritel.webp": "315cd077"
 }

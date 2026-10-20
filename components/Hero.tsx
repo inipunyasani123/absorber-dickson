@@ -115,13 +115,13 @@ const Hero = () => {
               <span className="tech-label font-semibold text-slate-500">
                 Sachet dalam kemasan
               </span>
-              <span className="tech-label text-slate-500">Skala 1:1</span>
+              <span className="tech-label text-slate-500">Tanpa skala</span>
             </div>
 
             <div className="relative aspect-[4/3] w-full overflow-hidden bg-paper-2 sm:aspect-[5/6]">
               <Image
-                src="/images/sachet-buah.webp"
-                alt="Sachet EthyleneAbsorber ditempatkan bersama buah segar di dalam kemasan"
+                src="/images/teknis/hero-kemasan.webp"
+                alt="Gambar teknis potongan kardus berisi mangga dengan sachet EthyleneAbsorber berdiri di dinding kemasan"
                 fill
                 priority
                 sizes="(min-width: 1024px) 46vw, 100vw"

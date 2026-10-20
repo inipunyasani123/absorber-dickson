@@ -25,6 +25,10 @@ Konsep "Korporat" dengan bahasa rupa **Lembar Data**: grid milimeter, rel pengga
 - Font: Archivo, IBM Plex Mono (next/font)
 - SEO: metadata per halaman, Open Graph, JSON-LD, sitemap.xml, dan robots.txt
 
+## Gambar
+
+Seluruh gambar adalah ilustrasi teknis buatan sendiri (gaya Lembar Data), dibuat ulang lewat `scripts/ilustrasi/gambar-teknis.mjs`. Daftar berkas & sumber: [`public/images/SUMBER.md`](public/images/SUMBER.md).
+
 ## Menjalankan secara lokal
 
 ```bash

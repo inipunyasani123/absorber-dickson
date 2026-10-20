@@ -7,28 +7,28 @@ const sectors = [
   {
     code: 'A',
     title: 'Ekspor Hortikultura',
-    image: '/images/buahsegar1.webp',
+    image: '/images/teknis/sektor-ekspor.webp',
     desc: 'Manggis, pisang, dan mangga dalam pengapalan laut jarak jauh yang menuntut masa simpan panjang.',
     tags: ['Kontainer 20/40 ft', 'Reefer'],
   },
   {
     code: 'B',
     title: 'Gudang & Cold Storage',
-    image: '/images/container.webp',
+    image: '/images/teknis/sektor-gudang.webp',
     desc: 'Ruang penyimpanan tertutup tempat etilen paling mudah menumpuk dan memicu efek berantai.',
     tags: ['Curah', 'Palet'],
   },
   {
     code: 'C',
     title: 'Ritel Modern',
-    image: '/images/buahsegar2.webp',
+    image: '/images/teknis/sektor-ritel.webp',
     desc: 'Rak pajang dan area display yang membutuhkan tampilan buah tetap prima hingga penutupan toko.',
     tags: ['Display', 'Back store'],
   },
   {
     code: 'D',
     title: 'Minuman & Olahan Segar',
-    image: '/images/minuman1.webp',
+    image: '/images/teknis/sektor-olahan.webp',
     desc: 'Produk turunan berbahan buah yang mutunya ikut turun bila bahan bakunya lewat matang.',
     tags: ['Bahan baku', 'Distribusi'],
   },
@@ -66,14 +66,10 @@ const Applications = () => {
               <div className="relative w-28 shrink-0 overflow-hidden sm:h-44 sm:w-full">
                 <Image
                   src={s.image}
-                  alt={s.title}
+                  alt={`Gambar teknis penempatan sachet: ${s.title}`}
                   fill
                   sizes="(min-width: 1024px) 25vw, (min-width: 640px) 50vw, 112px"
                   className="object-cover transition-transform duration-700 ease-out group-hover:scale-[1.05]"
-                />
-                <div
-                  aria-hidden="true"
-                  className="absolute inset-0 bg-gradient-to-t from-ink/60 via-ink/5 to-transparent"
                 />
                 <span className="tech absolute top-0 left-0 bg-ink px-2.5 py-1.5 text-[0.6875rem] font-semibold text-lime">
                   {s.code}
