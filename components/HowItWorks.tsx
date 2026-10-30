@@ -74,7 +74,7 @@ const HowItWorks = () => {
           </div>
           <Link
             href="/faq"
-            className="shrink-0 text-sm font-bold text-brand underline-offset-4 hover:underline"
+            className="shrink-0 text-sm font-bold text-brand underline-offset-4 hover:underline sentuh"
           >
             Baca pertanyaan teknis →
           </Link>

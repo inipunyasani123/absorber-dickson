@@ -321,7 +321,7 @@ export default function ContactPage() {
             </div>
             <Link
               href="/faq"
-              className="inline-flex shrink-0 items-center gap-2 text-sm font-bold text-brand underline-offset-4 hover:underline"
+              className="inline-flex shrink-0 items-center gap-2 text-sm font-bold text-brand underline-offset-4 hover:underline min-h-11"
             >
               Buka lembar tanya jawab
               <ArrowRight size={15} strokeWidth={2.5} />

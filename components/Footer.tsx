@@ -76,12 +76,12 @@ export default function Footer() {
             <h2 className="tech-label mb-5 border-b border-white/15 pb-3 font-semibold text-white">
               Navigasi
             </h2>
-            <ul className="grid grid-cols-2 gap-x-6 gap-y-3 sm:block sm:space-y-3">
+            <ul className="grid grid-cols-2 gap-x-6 gap-y-0 sm:block sm:space-y-0">
               {navigasi.map((l) => (
                 <li key={l.href}>
                   <Link
                     href={l.href}
-                    className="text-sm transition-colors hover:text-lime"
+                    className="inline-flex min-h-11 items-center text-sm transition-colors hover:text-lime"
                   >
                     {l.label}
                   </Link>
@@ -131,10 +131,10 @@ export default function Footer() {
             © {tahun} PT Dickson Synergy · Dok. EA-KORP-01 · Rev. {tahun}.01
           </p>
           <div className="flex gap-7">
-            <Link href="/privacy" className="text-sm transition-colors hover:text-lime">
+            <Link href="/privacy" className="inline-flex min-h-11 items-center text-sm transition-colors hover:text-lime">
               Kebijakan Privasi
             </Link>
-            <Link href="/terms" className="text-sm transition-colors hover:text-lime">
+            <Link href="/terms" className="inline-flex min-h-11 items-center text-sm transition-colors hover:text-lime">
               Syarat Layanan
             </Link>
           </div>

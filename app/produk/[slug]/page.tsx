@@ -38,9 +38,9 @@ export default async function LembarData({ params }: { params: Promise<{ slug: s
     <div className="bg-white">
       <PageHead doc={p.kode} eyebrow={`Lembar data · ${p.fungsi}`} title={p.nama} intro={p.ringkas}>
         <nav aria-label="Remah roti" className="tech-label mt-8 flex flex-wrap gap-2 text-white/70">
-          <Link href="/" className="hover:text-lime">Beranda</Link>
+          <Link href="/" className="hover:text-lime sentuh">Beranda</Link>
           <span aria-hidden="true">/</span>
-          <Link href="/produk" className="hover:text-lime">Katalog</Link>
+          <Link href="/produk" className="hover:text-lime sentuh">Katalog</Link>
           <span aria-hidden="true">/</span>
           <span className="text-white">{p.kode}</span>
         </nav>

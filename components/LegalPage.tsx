@@ -58,7 +58,7 @@ export default function LegalPage({
 
           <div className="mt-10 flex flex-col gap-5 border-l-2 border-brand bg-white px-7 py-6 sm:flex-row sm:items-center sm:justify-between">
             <p className="text-sm leading-relaxed text-slate-700">Ada pertanyaan mengenai dokumen ini?</p>
-            <Link href="/kontak" className="shrink-0 text-sm font-bold text-brand underline-offset-4 hover:underline">
+            <Link href="/kontak" className="shrink-0 text-sm font-bold text-brand underline-offset-4 hover:underline sentuh">
               Hubungi kami →
             </Link>
           </div>

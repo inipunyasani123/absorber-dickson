@@ -47,7 +47,7 @@ const Applications = () => {
           action={
             <Link
               href="/kontak"
-              className="text-sm font-bold text-brand underline-offset-4 hover:underline"
+              className="text-sm font-bold text-brand underline-offset-4 hover:underline sentuh"
             >
               Diskusikan kebutuhan sektor Anda →
             </Link>
